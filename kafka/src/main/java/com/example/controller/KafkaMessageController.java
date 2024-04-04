@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.model.KafkaMessage;
+import com.example.model.KafkaMessageEmail;
 import com.example.service.KafkaMessageService;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -20,7 +20,7 @@ public class KafkaMessageController {
 	private KafkaMessageService kafkaService;
 	
 	@RequestMapping(value = "/createMessage", method = {RequestMethod.POST}, produces = MediaType.APPLICATION_JSON_VALUE)
-	public void createMessage(@RequestBody(required=true) KafkaMessage kafkaMessage, HttpServletRequest request, HttpServletResponse response) {
+	public void createMessage(@RequestBody(required=true) KafkaMessageEmail kafkaMessage, HttpServletRequest request, HttpServletResponse response) {
 		kafkaService.createMessage(kafkaMessage);
 	}
 	
