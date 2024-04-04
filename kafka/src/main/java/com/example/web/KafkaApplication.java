@@ -2,8 +2,10 @@ package com.example.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication(scanBasePackages = {"com.example.controller", "com.example.service", "com.example.configuration"})
+@SpringBootApplication
+@ComponentScan(basePackages = "com.example")
 public class KafkaApplication {
 
 	public static void main(String[] args) {
