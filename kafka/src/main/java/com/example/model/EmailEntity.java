@@ -6,17 +6,10 @@ public class EmailEntity implements Serializable{
 	
 	private static final long serialVersionUID = -1440385977076532533L;
 	
-	private String from;
 	private String to;
 	private String subject;
 	private String body;
 	
-	public String getFrom() {
-		return from;
-	}
-	public void setFrom(String from) {
-		this.from = from;
-	}
 	public String getTo() {
 		return to;
 	}
@@ -37,6 +30,6 @@ public class EmailEntity implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return "EmailEntity [from=" + from + ", to=" + to + ", subject=" + subject + ", body=" + body + "]";
+		return "EmailEntity [to=" + to + ", subject=" + subject + ", body=" + body + "]";
 	}
 }

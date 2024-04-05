@@ -23,11 +23,4 @@ public class KafkaMessageController {
 	public void createMessage(@RequestBody(required=true) KafkaMessageEmail kafkaMessage, HttpServletRequest request, HttpServletResponse response) {
 		kafkaService.createMessage(kafkaMessage);
 	}
-	
-	/*
-	@RequestMapping(value = "/hello", method = RequestMethod.GET)
-    public String helloWorld() {
-        return "Hello, World!";
-    }
-    */
 }
